@@ -1,5 +1,5 @@
 // TODO: Переіменуйте на власний модуль.
-module github.com/sueta2016/labik-2
+module github.com/sueta2016/labik2
 
 go 1.20
 
