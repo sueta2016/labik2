@@ -12,7 +12,7 @@ func isNumeric(s string) bool {
 	return err == nil
 }
 
-func prefixToPostfix(prefixExpression string) (string, error) {
+func PrefixToPostfix(prefixExpression string) (string, error) {
 
 	tokens := strings.Fields(prefixExpression)
 

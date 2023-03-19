@@ -1,10 +1,10 @@
 package lab2
 
 import (
-	"fmt"
-	"testing"
-
-	"github.com/stretchr/testify/assert"
+  "fmt"
+  "testing"
+  "errors"
+  "github.com/stretchr/testify/assert"
 )
 
 func TestIsNumeric(t *testing.T) {
@@ -30,7 +30,7 @@ func TestPrefixToPostfix(t *testing.T) {
     }
 
     for _, tc := range testCases {
-        postfixExpression, err := prefixToPostfix(tc.prefixExpression)
+        postfixExpression, err := PrefixToPostfix(tc.prefixExpression)
         assert.Equal(t, tc.err, err)
         assert.Equal(t, tc.postfixExpression, postfixExpression)
     }
@@ -38,10 +38,10 @@ func TestPrefixToPostfix(t *testing.T) {
 }
 
 func ExamplePrefixToPostfix() {
-	res, err := prefixToPostfix("+ 3 4")
-	if err == nil {
-		fmt.Println(res)
-	} else {
-		panic(err)
-	}
+  res, err := PrefixToPostfix("+ 3 4")
+  if err == nil {
+    fmt.Println(res)
+  } else {
+    panic(err)
+  }
 }
