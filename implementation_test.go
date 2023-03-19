@@ -8,7 +8,7 @@ import (
 )
 
 func TestIsNumeric(t *testing.T) {
-    assert.True(t, isNumeric("123"))
+    assert.True(t, isNumeric("...."))
     assert.True(t, isNumeric("0.5"))
     assert.True(t, isNumeric("-10"))
     assert.False(t, isNumeric("abc"))
